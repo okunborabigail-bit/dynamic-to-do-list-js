@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
         // Create li element
         const li = document.createElement('li');
         li.textContent = taskText;
-        // ✅ Use classList.add instead of className
+        // Create remove button
         const removeButton = document.createElement('button');
         removeButton.textContent = "Remove";
-        removeButton.classList.add('remove-btn'); // <--- CHANGE HERE
+        removeButton.className = 'remove-btn';
         // Remove task from DOM and Local Storage
         removeButton.onclick = function () {
             taskList.removeChild(li);
@@ -62,4 +62,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
